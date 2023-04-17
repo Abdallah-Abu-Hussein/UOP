@@ -198,7 +198,7 @@ A datafile can span multiple disks. The size of a
 datafile is initially determined by the DBA upon creation. It can be as large as the largest file permitted by the operating system. The configuration of the machine on which the database is running determines
 exactly how the information in the datafile is distributed across the disk.
 
-![](../photos/T-TS.png)
+![](../assets/T-TS.png)
 
 -  What Tablespaces used for ?
 
@@ -226,7 +226,7 @@ exactly how the information in the datafile is distributed across the disk.
 
 - TableSpaces and Datafiles
 
- ![ts-df](../photos/TS-DF.png)
+ ![ts-df](../assets/TS-DF.png)
 
 The relationship of tablespaces to `datafiles` in that `tablespaces` are logical space management structures that are composed of one or more disk or physical files. Oracle refers to these physical files as datafiles,
 the files that hold the physical data contained in the objects in the tablespaces.
@@ -298,7 +298,7 @@ Q: Connect with user std4 and Show all tables and views
  Select * from tab;
 ```
 ### How to create a Table:
-![imageCT-EX](../photos/CT-EX.png)
+![imageCT-EX](../assets/CT-EX.png)
 
 ```sql 
 Create table Major(
@@ -333,7 +333,7 @@ Select Constraint_name,status Form user_constraints where table_name 'STUDENT';
 ```
 The Results :
 
-![](../photos/Re_se.png)
+![](../assets/Re_se.png)
 
 To Make those constraints more readable you can rename them by altering the table with something like this:
 
@@ -366,7 +366,7 @@ constraint student_mno_fk foreign key(Mno) References Major
 ```
 The Result: 
 
-![](../photos/co-re.png)
+![](../assets/co-re.png)
 
 ### How To create a view 🔥 🔥
  To create a new view in a database, you use the following Oracle 
@@ -382,10 +382,10 @@ WHERE view_conditions;  CREATE VIEW view_name [(column_aliases)] AS
 ```
 ### example 
 We have the table emp; 
-![](../photos/desc-t.png)
+![](../assets/desc-t.png)
 
 Let's create View for this Table : 
-![](../photos/v-example.png)
+![](../assets/v-example.png)
 
 ```sql
 create view emp_v1 as (select ename, sal,hiredate from emp);
@@ -396,7 +396,7 @@ select * from emp_v1;
 ```
 The output:
 
-![](../photos/v-output.png)
+![](../assets/v-output.png)
 
 
 This is the most basic `view you can create However there is mush more things you can do to have more control on the view : 
@@ -405,7 +405,7 @@ check those example 🔥 💣**examples** 🔥 💣 :
 
 1️⃣ : inserting data into the view 
 
-  ![](../photos/v2-ex.png)
+  ![](../assets/v2-ex.png)
 
 > Usually You can insert data into a view However keep in mind to that you will not be able  to so if any of those are in your statement :
 
@@ -423,11 +423,11 @@ check those example 🔥 💣**examples** 🔥 💣 :
 
 2️⃣ trying to insert with the check condition not being meet 
 
-![](../photos/view-sc.png)
+![](../assets/view-sc.png)
 
 3️⃣ Trying to insert with Aggregation `sum` OR `group by`
 
-![](../photos/v4-noU.png)
+![](../assets/v4-noU.png)
 
 
 ### How To create tablespace
